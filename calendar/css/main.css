@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+  box-sizing: border-box;
+}
+html {
+  line-height: 1;
+  font-size: 16px;
+}
+body {
+  font-family: 'Helvetica Neue', 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.calendar {
+  position: relative;
+  display: inline-block;
+  text-align: initial;
+}
+
+.calendar table {
+  border-collapse: initial;
+  border-spacing: 10px;
+  border-radius: 3px;
+}
+.calendar th,
+.calendar td {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 3px;
+}
+
+.calendar .btn {
+  position: absolute;
+  top: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 1px;
+  text-indent: 100%;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.calendar .btn:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  line-height: 40px;
+  color: #42a147;
+  font-size: 18px;
+  text-indent: 0;
+  text-align: center;
+}
+
+.calendar .btn-prev {
+  left: 10px;
+}
+
+.calendar .btn-next {
+  right: 10px;
+}
+
+.calendar .btn-prev:before {
+  content: "<";
+}
+
+.calendar .btn-next:before {
+  content: ">";
+}
+
+.calendar .btn:hover {
+  background-color: #eeeeee;
+}
+
+.calendar .cheader {
+  padding-left: 50px;
+  padding-right: 50px;
+  font-weight: bold;
+  color: #42a147;
+}
+
+.calendar .wday {
+  color: #676767;
+  font-weight: bold;
+}
+
+.calendar .day {
+  font-size: 14px;
+  color: #42a147;
+  border: 1px solid #eeeeee;
+}
+
+.calendar .day:empty {
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.calendar .day.today {
+  background-color: #42a147;
+  color: #fff;
+  border-color: transparent;
+}
