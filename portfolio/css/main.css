@@ -126,7 +126,6 @@ body {
 
 .flexbox {
   display: flex;
-  flex-wrap: wrap;
 }
 
 .hero__btns .btn:first-child {
@@ -187,27 +186,35 @@ body {
 }
 
 .card__header--html {
+    height: 172px;
   color: #4eaacf;
   background-color: #e5f8ff;
 }
 
 .card__header--css {
+    height: 172px;
   color: #533cba;
   background-color: #ecebff;
 
 }
 .card__header--js {
+    height: 172px;
   color: #da7442;
   background-color: #fff0e7;
 }
 
 .card__desc {
   padding: 30px;
+  height: 270px;
 }
 
 .card__para {
-  font-size: 20px;
+  display: -webkit-box;
+  overflow: hidden;
+  font-size: 18px;
   line-height: 1.5;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
 }
 
 .card__link {
@@ -235,10 +242,6 @@ body {
   justify-content: space-around;
   height: 150px;
   background-color: #f5f3f3;
-}
-
-.mb-section {
-  margin-bottom: 80px;
 }
 
 .card__header--game {
