@@ -1,12 +1,13 @@
-const WebSocket = require('ws');
-
-const ws = new WebSocket.Server({
-  port: 8888
+const http = require('http').createServer();
+const io = require('socket.io')(http, {
+  origin: '*'
 });
 
-ws.on('connection', function(ws) {
+io.on('connection', function(socket) {
   console.log('a connection opened');
-  ws.on('close', function() {
-    console.log('a connection closed');
+  socket.on('disconnect', function() {
+    console.log('a connection disconnected');
   })
 });
+
+http.listen(8888);

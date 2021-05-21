@@ -1,11 +1,11 @@
 'use strict';
-const ws = new WebSocket('ws://14.232.232.109:8888');
 const heading = document.querySelector('h1');
+const socket = io('ws://14.232.232.109:8888');
 
-ws.onopen = function() {
-  heading.textContent = 'Connection opened';
-}
+socket.on('connect', function() {
+  heading.textContent = 'Connection is opened';
+});
 
-ws.onerror = function() {
+socket.on('error', function() {
   heading.textContent = 'Connection error';
-}
+});
