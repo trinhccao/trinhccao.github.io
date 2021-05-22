@@ -20,7 +20,7 @@ function loadImage(url) {
   });
 }
 
-class Car {
+class Game {
   constructor(image, x, y, width, height) {
     this.context = canvas.getContext('2d');
     this.image = image;
@@ -32,6 +32,7 @@ class Car {
     this._moveRight = false;
     this.speedX = 8;
     this.speedY = 10;
+    this.state = 'PAUSED';
   }
   moveLeft() {
     this._moveLeft = true;
@@ -55,7 +56,7 @@ class Car {
   }
 }
 
-class Background extends Car {
+class Background extends Game {
   constructor(image, x, y, width, height) {
     super(image, x, y, width, height);
   }
@@ -73,7 +74,7 @@ class Background extends Car {
   }
 }
 
-class Enemy extends Car {
+class Enemy extends Game {
   constructor(image, sx, sy, swidth, sheight, x, y, width, height) {
     super(image, x, y, width, height);
     this.sx = sx;
@@ -144,7 +145,8 @@ function startGame() {
     canvas.height));
   backgrounds.push(new Background(images.background, 0, -canvas.height,
     canvas.width, canvas.height));
-  car = new Car(images.car, 30, canvas.height - 250, 100, 200);
+  car = new Game(images.car, 30, canvas.height - 250, 100, 200);
+  car.status = 'RUNNING';
   updateGame();
 }
 
@@ -171,6 +173,7 @@ function updateGame() {
     bgm.currentTime = 0;
     fx.currentTime = 0;
     fx.play();
+    car.status = 'PAUSED';
     return;
   }
   for (let i = 0; i < backgrounds.length; i++) {
@@ -195,6 +198,7 @@ window.addEventListener('keydown', (evt) => {
     case 40: console.log('Down');
   }
 });
+
 window.addEventListener('keyup', (evt) => {
   switch(evt.keyCode || evt.which) {
     case 37: car._moveLeft = false;
@@ -207,11 +211,18 @@ window.addEventListener('keyup', (evt) => {
   }
 });
 
-loadImage('images/background.png').then((image) => {
+window.addEventListener('keyup', (evt) => {
+  if (evt.keyCode === 13 || evt.which === 13) {
+    if (car.status === 'RUNNING') return;
+    restartGame();
+  }
+});
+
+loadImage('./images/background.png').then((image) => {
   images.background = image;
-  loadImage('images/car.png').then((image) => {
+  loadImage('./images/car.png').then((image) => {
     images.car = image;
-    loadImage('images/enemies.png').then((image) => {
+    loadImage('./images/enemies.png').then((image) => {
       images.enemies = image;
       btnStart.style = 'display: block';
     });
