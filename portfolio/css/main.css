@@ -48,7 +48,7 @@ body {
   margin-right: auto;
   padding-left: 30px;
   padding-right: 30px;
-  max-width: 1280px;
+  max-width: 1200px;
 }
 
 .head {
@@ -82,11 +82,9 @@ body {
 }
 
 .hero {
-  margin-bottom: 80px;
-  padding: 140px;
+  padding-top: 70px;
+  padding-bottom: 200px;
   min-height: 400px;
-  border-radius: 20px;
-  background-color: #f5f3f3;
 }
 
 .title {
@@ -100,8 +98,8 @@ body {
   font-size: 50px;
 }
 
-.text-muted {
-  color: #7a7b7f;
+.text-color-main {
+  color: #495057;
 }
 
 .text-bold {
@@ -128,6 +126,11 @@ body {
 
 .flexbox {
   display: flex;
+}
+
+.timeline__d-inline{
+  display: inline-block;
+  margin: 0;
 }
 
 .hero__btns {
@@ -173,17 +176,15 @@ body {
 }
 
 .card {
+  display: flex;
   overflow: hidden;
+  flex-direction: column;
   flex-basis: 0;
   flex-grow: 1;
   margin-left: 25px;
   margin-right: 25px;
   border-radius: 15px;
-  box-shadow:
-  0 -2px 10px #e5e7f2,
-  0 0,
-  0 16px 10px #e5e7f2,
-  0 0;
+  border: 1px solid rgba(204, 204, 204, 0.98);
 }
 
 .card__header {
@@ -198,43 +199,40 @@ body {
   text-align: center;
   font-style: normal;
   font-size: 60px;
+  font-weight: normal;
   z-index: 1;
 }
 
+.card__desc {
+  flex-grow: 1;
+  padding: 30px;
+}
+
 .card__header--html {
-    height: 172px;
+  height: 172px;
   color: #4eaacf;
   background-color: #e5f8ff;
 }
 
 .card__header--css {
-    height: 172px;
+  height: 172px;
   color: #533cba;
   background-color: #ecebff;
-
 }
 .card__header--js {
-    height: 172px;
+  height: 172px;
   color: #da7442;
   background-color: #fff0e7;
 }
 
-.card__desc {
-  padding: 30px;
-  height: 270px;
-}
-
 .card__para {
-  display: -webkit-box;
-  overflow: hidden;
   font-size: 18px;
   line-height: 1.5;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 7;
 }
 
 .card__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
   position: relative;
   height: 100%;
   text-decoration: none;
@@ -286,14 +284,96 @@ body {
   background-repeat: no-repeat;
 }
 
-.card__overlay {
+.timeline {
+  position: relative;
+  margin-left: 150px;
+  padding-top: 50px;
+  padding-left: 150px;
+  max-width: 700px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 150px;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background-color: #7c17f7;
+}
+
+.timeline__item {
+  position: relative;
+  margin-bottom: 50px;
+  padding-left: 50px;
+}
+
+.timeline__item::before {
+  content: "";
   position: absolute;
   top: 0;
+  left: -6px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #7c17f7;
+}
+
+.timeline__item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline__time {
+  position: absolute;
+  right: 100%;
+  margin-top: 2px;
+  padding-right: 25px;
+  width: 150px;
+  font-size: 12px;
+  line-height: 1;
+  text-align: right;
+  font-weight: bold;
+  color: #7c17f7;
+}
+
+.timeline__title {
+  margin-bottom: 15px;
+  line-height: 1;
+  color: #7c17f7;
+}
+
+.timeline__group {
+  margin-bottom: 8px;
+}
+
+.timeline__dt {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #48568e;
+}
+
+.timeline__dd {
+  color: #495057;
+}
+
+.timeline__sublist {}
+
+.timeline__sublist-item {
+  display: block;
+  position: relative;
+  margin-bottom: 7px;
+  padding-left: 0.7em;
+}
+
+.timeline__sublist-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline__sublist-item::before {
+  content: "-";
+  position: absolute;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255,255,255,0.45);
-  backdrop-filter: blur(10px);
+  font-size: 1em;
 }
 
 .sr-only {
@@ -316,4 +396,10 @@ body {
 
 .social--linkedin {
   background-image: url("../img/ico-linkedin.png");
+}
+
+@media screen and (max-width: 1366px) {
+  .container {
+    max-width: 1140px;
+  }
 }
