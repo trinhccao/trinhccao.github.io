@@ -134,6 +134,7 @@ body {
 }
 
 .hero__btns {
+  display: flex;
   margin-top: 40px;
 }
 
@@ -257,6 +258,7 @@ body {
 }
 
 #footer {
+  display: flex;
   align-items: center;
   justify-content: center;
   height: 150px;
@@ -401,5 +403,56 @@ body {
 @media screen and (max-width: 1366px) {
   .container {
     max-width: 1140px;
+  }
+
+  .flexbox {
+    flex-direction: column;
+  }
+
+  .section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .row {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .hero {
+    padding-top: 0;
+    padding-bottom: 35px;
+    min-height: auto;
+  }
+
+  .hero__title {
+    font-size: 45px;
+  }
+
+  .card {
+    flex-basis: auto;
+    margin-bottom: 50px;
+  }
+
+  .card:last-child {
+    margin-bottom: 0;
+  }
+
+  .timeline {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .timeline::before {
+    left: 0;
+  }
+
+  .timeline__time {
+    display: block;
+    position: static;
+    margin-bottom: 5px;
+    padding: 0;
+    width: auto;
+    text-align: left;
   }
 }
