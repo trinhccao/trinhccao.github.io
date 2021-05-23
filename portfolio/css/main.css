@@ -288,16 +288,16 @@ body {
 
 .timeline {
   position: relative;
-  margin-left: 150px;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 50px;
-  padding-left: 150px;
   max-width: 700px;
 }
 
 .timeline::before {
   content: "";
   position: absolute;
-  left: 150px;
+  left: 0;
   top: 0;
   width: 3px;
   height: 100%;
@@ -327,20 +327,16 @@ body {
 
 .timeline__time {
   display: block;
-  position: absolute;
-  right: 100%;
-  margin-top: 2px;
-  padding-right: 25px;
-  width: 150px;
+  margin-bottom: 15px;
   font-size: 12px;
   line-height: 1;
-  text-align: right;
+  text-align: left;
   font-weight: bold;
   color: #7c17f7;
 }
 
 .timeline__title {
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   line-height: 1;
   color: #7c17f7;
 }
@@ -441,19 +437,5 @@ body {
 
   .timeline {
     margin-left: 0;
-    padding-left: 0;
-  }
-
-  .timeline::before {
-    left: 0;
-  }
-
-  .timeline__time {
-    position: static;
-    margin-top: 0;
-    margin-bottom: 5px;
-    padding: 0;
-    width: auto;
-    text-align: left;
   }
 }
