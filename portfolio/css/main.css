@@ -65,7 +65,7 @@ body{font-family:roboto,sans-serif}
 .row{padding-top:25px;padding-bottom:25px}
 .hero{padding-top:0;padding-bottom:35px;min-height:auto}
 .hero__title{font-size:45px}
-.card{flex-basis:auto;margin-bottom:50px}
+.card{flex-basis:auto;margin-left:0;margin-right:0;margin-bottom:50px}
 .card:last-child{margin-bottom:0}
 .timeline{margin-left:0}
 }
