@@ -30,7 +30,7 @@ body{font-family:roboto,sans-serif}
 .btn--secondary{color:#7a7b7f;border:1px solid #7a7b7f}
 .btn--secondary:hover{color:#fff;background-color:#515256;border-color:#515256}
 .title-lv3{display:inline-block;margin-bottom:15px;font-size:1.875rem;font-weight:700;letter-spacing:3px;color:#e8593a;background-image:linear-gradient(to bottom,#fce8e0,#fce8e0);background-size:100% .9125rem;background-repeat:no-repeat;background-position:0 100%}
-.exp-company{display:block;margin-bottom:25px;text-align:center;font-size:.75rem;color:#afb8c5}
+.exp-company{display:block;margin-bottom:25px;font-size:.75rem;color:#afb8c5}
 .content-wrapper{display:flex;flex-wrap:wrap;padding-top:25px;padding-bottom:25px}
 .content-wrapper--vertical{flex-direction:column}
 .card{display:flex;flex-direction:column;flex-basis:33.333%;padding:25px}
