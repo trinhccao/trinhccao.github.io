@@ -1,2 +1,2 @@
 'use strict';
-console.log('JavaScript is worked');
+console.log('JS loaded OK');
