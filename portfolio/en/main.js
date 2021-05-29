@@ -1,3 +1,3 @@
 'use strict';
-import language from '/modules/language.js';
+import language from '../modules/language.js';
 language.setPreferred('en');

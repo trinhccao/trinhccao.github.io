@@ -1,4 +1,4 @@
-import language from '/modules/language.js';
+import language from './language.js';
 
 const page = {
   useLang: function(lang) {
