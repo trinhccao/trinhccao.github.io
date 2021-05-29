@@ -4,7 +4,7 @@ const page = {
   useLang: function(lang) {
     lang = lang.toLowerCase();
     language.setPreferred(lang);
-    location.href = `/${lang}/`;
+    location.href = `/portfolio/${lang}/`;
   }
 }
 
