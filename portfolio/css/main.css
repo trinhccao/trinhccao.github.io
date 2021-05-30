@@ -26,7 +26,6 @@ body{font-family:roboto,sans-serif}
 .sr-only{position:absolute;overflow:hidden;margin:-1px;width:1px;height:1px;clip:rect(0,0,0,0)}
 .text-orange{color:#e8593a}
 .btn{display:inline-block;padding:15px 20px;text-align:center;text-decoration:none;border-radius:10px;background:0 0;-webkit-appearance:none;transition:.2s background-color linear}
-.flexbox{display:flex}
 .timeline__d-inline{display:inline-block;margin:0}
 .hero__btns{display:flex;margin-top:40px}
 .hero__btns .btn:first-child{margin-right:25px}
@@ -71,9 +70,7 @@ body{font-family:roboto,sans-serif}
 .intro__para{display:block}
 @media screen and (max-width:1024px){
 .container{max-width:1140px}
-.flexbox{flex-direction:column}
 .section{padding-top:20px;padding-bottom:20px}
-.row{padding-top:25px;padding-bottom:25px}
 .hero{padding-top:0;padding-bottom:50px;min-height:auto}
 .btn{flex-grow:1}
 .hero__title{font-size:2.8125rem}
