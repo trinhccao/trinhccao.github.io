@@ -1,11 +1,11 @@
 const language = {
-  setPreferred: (value) => {
+  setPreference: (value) => {
     localStorage.setItem('language', value.toLowerCase());
   },
-  getPreferred: function() {
-    return localStorage.getItem('language') || 'en';
+  getPreference: function() {
+    return localStorage.getItem('language') || 'vi';
   },
-  resetPreferred: function() {
+  resetPreference: function() {
     localStorage.removeItem('language');
   }
 }
