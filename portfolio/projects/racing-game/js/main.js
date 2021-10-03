@@ -105,16 +105,12 @@ const responseEnemies = (() => {
   return function() {
     count++;
     if (count === 120) {
-      let spriteY = enemiesSprite[randomInt(0, enemiesSprite.length - 1)];
-      let side = randomInt(0, 1);
-      let dy = randomInt(263, 406);
-      if (side === 0) {
-        enemies.push(new Enemy(images.enemies, 4, spriteY,
-          118, 240, 30, -dy, 100, 203));
-      } else {
-        enemies.push(new Enemy(images.enemies, 4, spriteY,
-          118, 240, 168, -dy, 100, 203));
-      }
+      const spriteY = enemiesSprite[randomInt(0, enemiesSprite.length - 1)];
+      const sideX = randomInt(0, 1) ? 30 : 168;
+      const dy = randomInt(263, 406);
+      enemies.push(
+        new Enemy(images.enemies, 4, spriteY, 118, 240, sideX, -dy, 100, 203)
+      );
       count = 0;
     }
   };
