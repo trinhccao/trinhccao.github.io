@@ -245,6 +245,7 @@ body {
   color: #495057;
 }
 .card__link {
+  color: #495057;
   text-decoration: none;
 }
 .card__link:after {
@@ -329,10 +330,22 @@ body {
 }
 #footer {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 150px;
   background-color: #f5f3f3;
+}
+#footer .row {
+  display: flex;
+}
+#footer .row:last-child {
+  margin-top: 15px;
+}
+.update-status {
+  font-size: 0.8em;
+  font-style: normal;
+  color: #8a8a8b;
 }
 .social {
   display: inline-block;
