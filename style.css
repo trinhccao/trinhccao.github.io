@@ -319,18 +319,8 @@ body {
 }
 
 .mark {
-  position: relative;
-}
-
-.mark::after {
-  content: "";
-  position: absolute;
-  bottom: 2px;
-  left: 0;
-  width: 100%;
-  height: 0.5em;
-  background-color: var(--color-mark);
-  z-index: -1;
+  background: linear-gradient(0deg, #FACAC9 35%, transparent 0%);
+  background-position-y: -2.9em;
 }
 
 @media screen and (min-width: 1920px) {
