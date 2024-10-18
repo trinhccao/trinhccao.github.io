@@ -49,7 +49,7 @@ body {
 }
 
 .container {
-  padding: 0 100px;
+  margin: 0 100px;
 }
 
 .header {
@@ -335,7 +335,7 @@ body {
 
 @media screen and (min-width: 1920px) {
   .container {
-    padding: 0 300px;
+    margin: 0 300px;
   }
 
   .headline__image {
