@@ -237,6 +237,7 @@ body {
 .skills__item {
   display: flex;
   flex-direction: column;
+  text-decoration: none;
 }
 
 .skills__thumb {
